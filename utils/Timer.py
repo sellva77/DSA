@@ -5,6 +5,7 @@ def timer_dec(baseFun):
         start= time.time()
         result=baseFun(*args, **kwargs)
         end=time.time()
-        print(f"Task time: {end-start} seconds")
+        elapsed = (end - start) * 1000
+        print(f"Task time: {elapsed} seconds")
         return result
     return enhanced_func

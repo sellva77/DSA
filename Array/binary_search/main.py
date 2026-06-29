@@ -38,7 +38,6 @@ data.append({
 })
 @timer_dec
 def locate_position(data,query):
-    print(f"{data=}  {query=}")
     
     for x in range(len(data)):
         if data[x] == query:
@@ -46,5 +45,36 @@ def locate_position(data,query):
     return -1
     
     
+
+@timer_dec
+def locate_position_binary(data, query):
+    low = 0
+    high = len(data) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        if data[mid] == query:
+            return mid
+        elif data[mid] < query:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 for x in data:
     print(locate_position(x["input"]["arr"],x["input"]["query"]),x["output"])
+    print(locate_position_binary(x["input"]["arr"],x["input"]["query"]),x["output"])
