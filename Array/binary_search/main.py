@@ -31,8 +31,8 @@ data.append({
     })
 data.append({
     "input": {
-        "arr": list(range(1, 1000001)),
-        "query": 999_999
+        "arr": list(range(1, 100_000_100)),
+        "query": 99_999_999
     },
     "output": 999998
 })
