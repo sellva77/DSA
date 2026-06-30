@@ -31,10 +31,10 @@ data.append({
     })
 data.append({
     "input": {
-        "arr": list(range(1, 1_000_001)),
+        "arr": list(range(1, 1000001)),
         "query": 999_999
     },
-    "output": 999_998
+    "output": 999998
 })
 @timer_dec
 def locate_position(data,query):
